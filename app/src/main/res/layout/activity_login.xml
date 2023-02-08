@@ -12,6 +12,18 @@
         android:layout_height="230dp"
         >
 
+        <ImageButton
+            android:id="@+id/back_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_24" />
+
         <ImageView
             android:id="@+id/project_icon"
             android:layout_width="110dp"
@@ -35,7 +47,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/newUserId"
         android:layout_marginStart="38dp"
         android:layout_marginTop="210dp"
         android:layout_marginEnd="38dp">
@@ -48,7 +59,9 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_Id"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:hintEnabled="false">
+
 
                 <EditText
                     android:id="@+id/login_email"
@@ -57,11 +70,11 @@
                     android:background="@drawable/layout_background3"
                     android:drawableStart="@drawable/ic_email_24"
                     android:drawablePadding="10dp"
-                    android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/gray01"
                     android:textColorHint="@color/gray01"
+                    android:hint="Email"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -90,24 +103,24 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <Button
                 android:id="@+id/forget_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
                 android:layout_below="@+id/password_toggle_Id"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/button_bg"
+                android:layout_alignParentEnd="false"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg_2"
                 android:padding="5dp"
-                android:text="forget password"
-                android:textColor="#000000" />
+                android:text="Forget Password"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_below="@+id/forget_text"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button_bg"
                 android:gravity="center"
                 android:text="Login"
@@ -117,15 +130,15 @@
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/newUserId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="10dp"
-        android:text="New User ? Signup"
-        android:textColor="#ffffff"
-        android:textSize="19sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/newUserId"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="New User ? Signup"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="19sp" />-->
 
 </RelativeLayout>
